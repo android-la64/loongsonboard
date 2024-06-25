@@ -1,0 +1,3 @@
+allow kernel device:dir { add_name write };
+allow kernel device:chr_file { create setattr };
+allow kernel self:capability mknod;

@@ -1,0 +1,2 @@
+# avc: denied { ioctl } for comm="mkswap" path="/dev/block/zram0" dev="tmpfs" ino=455 ioctlcmd=0x1272 scontext=u:r:toolbox:s0 tcontext=u:o     bject_r:ram_device:s0 tclass=blk_file permissive=1
+allow toolbox ram_device:blk_file rw_file_perms;

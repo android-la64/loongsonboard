@@ -1,0 +1,3 @@
+###
+#vendor.debug.vc8000d.trace    u:object_r:vendor_video_prop:s0 exact int
+#vendor.debug.vc8000e.trace    u:object_r:vendor_video_prop:s0 exact int

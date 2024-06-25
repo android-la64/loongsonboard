@@ -68,15 +68,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # application packages
 PRODUCT_PACKAGES += \
     Calendar \
+    DeskClock \
     LatinIME \
     Music \
     OneTimeInitializer \
     preinstalled-packages-platform-handheld-product.xml \
     SettingsIntelligence \
-
-    #DeskClock \
-
-
 
 #########   Default AOSP sounds
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
@@ -139,12 +136,11 @@ PRODUCT_PACKAGES += \
 
 
 # system packages
-# PRODUCT_PACKAGES += \
-#     memtrack \
-#     audio.primary \
-#     audio.usb.default
+PRODUCT_PACKAGES += \
+    audio.primary \
+    audio.usb.default
 
-
+    #memtrack \
 
 # system configurations
 PRODUCT_COPY_FILES := \
