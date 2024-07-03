@@ -151,7 +151,7 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/init.loongson_3a5000.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.loongson_3a5000.usb.rc \
     $(LOCAL_PATH)/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(LOCAL_PATH)/fstab.loongson_3a5000:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.loongson_3a5000 \
-    $(LOCAL_PATH)/fstab.loongson_3a5000:$(TARGET_COPY_OUT_RAMDISK)/fstab.loongson_3a5000 \
+    $(LOCAL_PATH)/fstab.loongson_3a5000.initrd:$(TARGET_COPY_OUT_RAMDISK)/fstab.loongson_3a5000 \
     $(LOCAL_PATH)/../common/Generic.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic.kl \
     $(LOCAL_PATH)/../common/displayconfig/default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/default.xml \
     $(PRODUCT_COPY_FILES)
