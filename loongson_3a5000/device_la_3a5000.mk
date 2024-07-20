@@ -1,5 +1,5 @@
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_release.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_release.mk)
 
 ############################# All HALs  ##############################
 # system configurations

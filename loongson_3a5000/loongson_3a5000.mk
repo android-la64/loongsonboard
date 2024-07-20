@@ -29,7 +29,10 @@ endif
 
 
 $(call inherit-product, device/loongson/loongsonboard/common/common_la.mk)
+# Patch for system(XC): some features not ready now!
+$(call inherit-product, device/loongson/loongsonboard/common/system_patch_la.mk)
 $(call inherit-product, device/loongson/loongsonboard/loongson_3a5000/la3a5000.prop)
+
 
 ### All products are controlled by these config files
 # mini_system
@@ -40,12 +43,8 @@ $(call inherit-product, device/loongson/loongsonboard/common/mini_product.mk)
 # system_ext: optional[wwd]
 $(call inherit-product-if-exist, device/loongson/loongsonboard/common/system_ext_la.mk)
 
-# Riscv patch for system(XC): some features not ready now!
-#$(call inherit-product, device/loongson/loongsonboard/common/system_patch_la.mk)
-
 # Extra packages
 $(call inherit-product, device/loongson/loongsonboard/common/subdevs_la.mk)
-
 
 ## Vendor part
 # AOSP default vendor configs

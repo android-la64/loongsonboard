@@ -1,6 +1,3 @@
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/media_product.mk)
-## XC-TODO
-
 # Product packages: we can added more later
 PRODUCT_PACKAGES += \
     Calendar \
@@ -12,9 +9,19 @@ PRODUCT_PACKAGES += \
     SettingsIntelligence \
 
 #    frameworks-base-overlays
+# More AOSP packages
+#PRODUCT_PACKAGES += \
+#    PhotoTable \
+#    preinstalled-packages-platform-aosp-product.xml \
+#    WallpaperPicker 
+#    unpackage-apps \
+
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/media_product.mk)
 
 #PRODUCT_PACKAGES_DEBUG += \
 #    frameworks-base-overlays-debug
+
+
 
 # Default AOSP sounds
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
@@ -24,13 +31,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone?=Ring_Synth_04.ogg \
     ro.config.notification_sound?=pixiedust.ogg \
     ro.com.android.dataroaming?=true \
-
-# More AOSP packages
-#PRODUCT_PACKAGES += \
-#    PhotoTable \
-#    preinstalled-packages-platform-aosp-product.xml \
-#    WallpaperPicker 
-#    unpackage-apps \
 
 # Telephony:
 #   Provide a APN configuration to GSI product
