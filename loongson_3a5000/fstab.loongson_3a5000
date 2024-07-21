@@ -2,9 +2,10 @@
 system    			/system             ext4      	ro,barrier=1                                          	wait,logical,first_stage_mount
 vendor    			/vendor             ext4      	ro,barrier=1                                          	wait,logical,first_stage_mount
 
-/dev/sda3    		/data               ext4      	noatime,nosuid,nodev,nomblk_io_submit,errors=panic    	wait
-/dev/sda4 			/cache 				ext4      	noatime,nosuid,nodev,nomblk_io_submit,errors=panic   	wait,formattable,latemount
+/dev/block/sda2 	/data       		ext4      	noatime,nosuid,nodev,nomblk_io_submit,errors=panic   	wait,check,quota,reservedsize=128M,latemount
+/dev/block/sda3 	/cache      		ext4      	noatime,nosuid,nodev,nomblk_io_submit,errors=panic  	wait,check,quota,reservedsize=128M,latemount
+/dev/block/sda4 	/metadata   		ext4    	noatime,nosuid,nodev    								wait,formattable,latemount
+
+
+#/dev/sda2    		/data               ext4      	noatime,nosuid,nodev,nomblk_io_submit,errors=panic    	wait
 # XC-TODO: wait,check,quota,fileencryption=aes-256-xts:aes-256-cts,reservedsize=128M,latemount
-
-/dev/sda5 			/metadata    		ext4    	noatime,nosuid,nodev    								wait,formattable,latemount
-
