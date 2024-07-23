@@ -2,7 +2,7 @@
 system    			/system             ext4      	ro,barrier=1                                          	wait,logical,first_stage_mount
 vendor    			/vendor             ext4      	ro,barrier=1                                          	wait,logical,first_stage_mount
 
-/dev/block/sda2 	/data       		ext4      	noatime,nosuid,nodev,nomblk_io_submit,errors=panic   	wait,check,quota,reservedsize=128M,latemount
+/dev/block/sda2 	/data       		f2fs      	noatime,nosuid,nodev,discard,fsync_mode=nobarrier    	wait,check,quota,latemount,formattable
 /dev/block/sda3 	/cache      		ext4      	noatime,nosuid,nodev,nomblk_io_submit,errors=panic  	wait,check,quota,reservedsize=128M,latemount
 /dev/block/sda4 	/metadata   		ext4    	noatime,nosuid,nodev    								wait,formattable,latemount
 
