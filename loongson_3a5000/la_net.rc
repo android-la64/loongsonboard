@@ -1,0 +1,9 @@
+service la_net /vendor/bin/la_net.sh
+    class latest
+    user root
+    group root
+    oneshot
+
+#on post-fs-data && property:sys.boot_completed=1
+on post-fs-data 
+	start la_net

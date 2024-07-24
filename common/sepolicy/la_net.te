@@ -1,0 +1,6 @@
+## Notes:
+# scontext[2] tcontext[2]:tclass {};
+#allow latest toolbox_exec:file { getattr read open execute_no_trans map };
+allow latest latest:udp_socket { create ioctl };
+allow latest latest:capability { net_admin };
+
