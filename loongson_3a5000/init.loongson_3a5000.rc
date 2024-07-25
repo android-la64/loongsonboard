@@ -1,6 +1,14 @@
 #import /vendor/etc/init/hw/init.loongson_3a5000.usb.rc
 import /vendor/etc/la_net.rc
 
+on early-init
+    setprop ro.hardware.gralloc minigbm
+    setprop ro.hardware.hwcomposer drm_minigbm
+    setprop ro.sf.lcd_density 150
+
+    setprop debug.ui.default_mapper 4
+    setprop debug.ui.default_gralloc 4
+
 on init
     # mount debugfs
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
