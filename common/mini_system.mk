@@ -13,10 +13,6 @@
 # # limitations under the License.
 # #
 
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-## XC-TODO: this mini-system is used for phone, not for tablet.
-
 #
 # All components inherited here go to system image
 #
@@ -33,6 +29,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 
+# XC: do NOT need this on tablet
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 #

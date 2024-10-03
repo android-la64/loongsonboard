@@ -1,19 +1,14 @@
 PRODUCT_SYSTEM_PROPERTIES += \
-    config.disable_renderscript=1 \
     ro.telephony.default_network=9
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.usejit=false \
-    ro.hw_timeout_multiplier=8 \
-    \
-    gralloc.drm.kms=/dev/dri/card0 \
-    ro.opengles.version=131072 \
     ro.hardware.gralloc=minigbm \
     ro.hardware.hwcomposer=drm_minigbm \
     \
-    debug.drm.mode.force=640x480 \
     debug.ui.default_mapper=4 \
     debug.ui.default_gralloc=4 \
-    ro.hardware.egl=mesa
+    ro.sf.lcd_density=150 \
 
-    #ro.sf.lcd_density=150 \
+	#ro.hardware.egl=mesa
+	#debug.drm.mode.force=640x480
+
