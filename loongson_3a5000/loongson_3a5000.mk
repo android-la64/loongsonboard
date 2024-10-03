@@ -14,12 +14,10 @@
 # limitations under the License.
 #
 
-
 # Disable Scudo outside of eng builds to save RAM.
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
   PRODUCT_DISABLE_SCUDO := true
 endif
-
 
 ##########################################
 #  common system from $SRC_TARGET_DIR
@@ -75,10 +73,6 @@ $(call inherit-product, device/loongson/loongsonboard/loongson_3a5000/device_la_
 
 # setup dalvik vm configs
 include frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk
-PRODUCT_SYSTEM_EXT_PROPERTIES += ro.lockscreen.disable.default=1
-
-PRODUCT_PACKAGES += \
-    vndk-sp
 
 ##########################################
 #  PRODUCT INFO

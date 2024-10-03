@@ -1,0 +1,7 @@
+# DHCP client
+type dhcpclient, domain;
+type dhcpclient_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(dhcpclient)
+net_domain(dhcpclient)
+

@@ -1,0 +1,17 @@
+# Wifi manager
+type netmgr, domain;
+type netmgr_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(netmgr)
+net_domain(netmgr)
+
+allow netmgr execns:fd use;
+
+
+# Allow netmgr to run ip and modify route table to block unblock traffic
+allow netmgr la_ip_exec:file execute_no_trans;
+allow netmgr self:netlink_route_socket nlmsg_write;
+# Packet socket for wifi forwarding
+allow netmgr self:packet_socket { bind create read setopt write };
+allow netmgr self:capability sys_module;
+allow netmgr self:vsock_socket create_socket_perms_no_ioctl;

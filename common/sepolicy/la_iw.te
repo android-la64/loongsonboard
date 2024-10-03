@@ -1,0 +1,6 @@
+type la_iw, domain;
+type la_iw_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(la_iw)
+net_domain(la_iw)
+

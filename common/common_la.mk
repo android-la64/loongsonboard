@@ -12,3 +12,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SYSTEM_PROPERTIES += \
     config.disable_renderscript=1 \
 
+
+# Disable lock screen
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.lockscreen.disable.default=1

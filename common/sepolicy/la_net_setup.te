@@ -1,0 +1,24 @@
+# la_net-setup service: runs init.goldfish.sh script
+type la_net_setup, domain;
+type la_net_setup_exec, vendor_file_type, exec_type, file_type;
+
+init_daemon_domain(la_net_setup)
+
+# TODO(b/79502552): Invalid property access from emulator vendor
+#set_prop(la_net_setup, debug_prop);
+allow la_net_setup self:capability { fowner chown net_admin net_raw };
+allow la_net_setup self:udp_socket { create ioctl };
+allow la_net_setup vendor_toolbox_exec:file execute_no_trans;
+allow la_net_setup vendor_file:file execute_no_trans;
+allowxperm la_net_setup self:udp_socket ioctl priv_sock_ioctls;
+wakelock_use(la_net_setup);
+allow la_net_setup vendor_shell_exec:file { rx_file_perms };
+
+#============= la_setup ==============
+allow la_net_setup la_ip_exec:file execute_no_trans;
+allow la_net_setup la_iw_exec:file execute_no_trans;
+allow la_net_setup mac80211_create_radios_exec:file execute_no_trans;
+
+# Set system properties to start services
+#set_prop(la_net_setup, ctl_default_prop);
+

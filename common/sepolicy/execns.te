@@ -1,0 +1,11 @@
+# Network namespace transitions
+type execns, domain;
+type execns_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(execns)
+
+allow execns varrun_file:dir search;
+allow execns varrun_file:file r_file_perms;
+allow execns self:capability { sys_admin setuid setgid };
+allow execns nsfs:file { open read };
+

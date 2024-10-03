@@ -1,5 +1,6 @@
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.telephony.default_network=9
+    persist.sys.timezone = "Asia/Shanghai"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.gralloc=minigbm \

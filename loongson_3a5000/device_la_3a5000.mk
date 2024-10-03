@@ -1,5 +1,3 @@
-
-
 # FIXME API_LEVEL 32 required manifest fcm verison ge 6
 # but now is 3
 #PRODUCT_SHIPPING_API_LEVEL := 31
@@ -19,7 +17,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_release.mk)
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/fstab.loongson_3a5000:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.loongson_3a5000 \
     $(LOCAL_PATH)/fstab.loongson_3a5000.ramdisk:$(TARGET_COPY_OUT_RAMDISK)/fstab.loongson_3a5000 \
-    $(LOCAL_PATH)/init.ranchu.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.loongson_3a5000.rc \
+    $(LOCAL_PATH)/init.loongson_3a5000.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.loongson_3a5000.rc \
     $(LOCAL_PATH)/../common/Generic.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic.kl \
     $(LOCAL_PATH)/../common/displayconfig/default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/default.xml \
     $(PRODUCT_COPY_FILES)

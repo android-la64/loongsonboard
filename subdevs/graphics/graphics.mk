@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
 
 #    android.hardware.configstore@1.1-service \
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     device/generic/goldfish/display_settings_freeform.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display_settings_freeform.xml \
 	device/generic/goldfish/display_settings.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display_settings.xml \
 
