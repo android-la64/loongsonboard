@@ -12,6 +12,9 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_release.mk)
 
+PRODUCT_BUILD_VENDOR_IMAGE := true
+PRODUCT_BUILD_USERDATA_IMAGE := true
+
 ############################# All HALs  ##############################
 # system configurations
 PRODUCT_COPY_FILES := \
