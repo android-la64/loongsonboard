@@ -39,7 +39,7 @@ USE_OPENGL_RENDERER := true
 # Non-A/B device
 AB_OTA_UPDATER := false
 
-# Build super.img defualt
+# Build super.img default
 BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
 BOARD_SUPER_PARTITION_SIZE := 4303355904 # 4G + 8M
 BOARD_SUPER_PARTITION_GROUPS := la_dynamic_partitions
@@ -96,7 +96,7 @@ BOARD_FLASH_BLOCK_SIZE := 512
 BOARD_SEPOLICY_DIRS := \
     device/loongson/loongsonboard/common/sepolicy
 
-DEVICE_MATRIX_FILE   := device/generic/goldfish/compatibility_matrix.xml
+#DEVICE_MATRIX_FILE   := device/generic/goldfish/compatibility_matrix.xml
 
 # Creates metadata partition mount point under root for
 # the devices with metadata parition
@@ -106,4 +106,4 @@ TARGET_USERIMAGES_USE_F2FS := true
 #BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 DEVICE_MANIFEST_FILE := device/loongson/loongsonboard/loongson_3a5000/manifest.xml
-DEVICE_MANIFEST_FILE += device/generic/goldfish/manifest.camera.xml
+#DEVICE_MANIFEST_FILE += device/generic/goldfish/manifest.camera.xml

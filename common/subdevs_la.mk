@@ -6,7 +6,7 @@ include device/loongson/loongsonboard/subdevs/performance/performance.mk
 include device/loongson/loongsonboard/subdevs/graphics/graphics.mk
 include device/loongson/loongsonboard/subdevs/audio/audio.mk
 include device/loongson/loongsonboard/subdevs/network/network.mk
-include device/loongson/loongsonboard/subdevs/camera/camera.mk
+#include device/loongson/loongsonboard/subdevs/camera/camera.mk
 
 
 include device/loongson/loongsonboard/subdevs/usb/usb.mk

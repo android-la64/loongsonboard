@@ -1,6 +1,5 @@
 
-BOARD_EXT4_SHARE_DUP_BLOCKS := true
-
+BOARD_EXT4_SHARE_DUP_BLOCKS := false
 
 # GSI also includes make_f2fs to support userdata parition in f2fs
 # for some devices
@@ -10,25 +9,18 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # the devices with metadata parition
 BOARD_USES_METADATA_PARTITION := true
 
-
 # Default is current, but allow devices to override vndk version if needed.
 BOARD_VNDK_VERSION := current
-
-
-# Required flag for non-64 bit devices from P.
-TARGET_USES_64_BIT_BINDER := true
 
 # Disable 64 bit mediadrmserver
 TARGET_ENABLE_MEDIADRM_64 :=
 # TARGET_DYNAMIC_64_32_MEDIASERVER := true
-
 
 # This flag is set by mainline but isn't desired for GSI.
 BOARD_USES_SYSTEM_OTHER_ODEX :=
 
 # Audio: must using XML format for Treblized devices
 USE_XML_AUDIO_POLICY_CONF := 1
-
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
