@@ -14,6 +14,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_release.mk)
 
 PRODUCT_BUILD_VENDOR_IMAGE := true
 PRODUCT_BUILD_USERDATA_IMAGE := true
+PRODUCT_BUILD_SUPER_PARTITION := true
+PRODUCT_BUILD_CACHE_IMAGE := true
 
 ############################# All HALs  ##############################
 # system configurations
