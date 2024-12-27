@@ -96,8 +96,6 @@ BOARD_FLASH_BLOCK_SIZE := 512
 BOARD_SEPOLICY_DIRS := \
     device/loongson/loongsonboard/common/sepolicy
 
-#DEVICE_MATRIX_FILE   := device/generic/goldfish/compatibility_matrix.xml
-
 # Creates metadata partition mount point under root for
 # the devices with metadata parition
 BOARD_USES_METADATA_PARTITION := true
@@ -106,4 +104,5 @@ TARGET_USERIMAGES_USE_F2FS := true
 #BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 DEVICE_MANIFEST_FILE := device/loongson/loongsonboard/loongson_3a5000/manifest.xml
-#DEVICE_MANIFEST_FILE += device/generic/goldfish/manifest.camera.xml
+
+BUILD_BROKEN_PLUGIN_VALIDATION := soong-llvm19
