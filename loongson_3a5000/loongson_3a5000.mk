@@ -52,7 +52,6 @@ $(call inherit-product, device/loongson/loongsonboard/loongson_3a5000/la3a5000.p
 #  All subdevs (graphics, audio, net etc)
 #########################################
 PRODUCT_SOONG_NAMESPACES += \
-    device/generic/goldfish \
     external/drm_hwcomposer
 
 # system_ext: optional[wwd]
@@ -87,3 +86,5 @@ PRODUCT_MODEL := Android on LoongsonArch64
 #PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_CHARACTERISTICS := tablet
 
+PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 16384
+PRODUCT_16K_DEVELOPER_OPTION := true
