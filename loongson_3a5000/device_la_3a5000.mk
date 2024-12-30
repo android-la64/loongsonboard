@@ -19,7 +19,10 @@ PRODUCT_BUILD_CACHE_IMAGE := true
 
 PRODUCT_PACKAGES += \
     hwservicemanager \
-    android.hidl.allocator@1.0-service
+    android.hidl.allocator@1.0-service \
+    vndservice \
+    vndservicemanager
+
 
 ############################# All HALs  ##############################
 # system configurations

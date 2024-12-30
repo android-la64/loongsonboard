@@ -5,11 +5,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.gralloc=minigbm \
     ro.hardware.hwcomposer=drm_minigbm \
-    \
     debug.ui.default_mapper=4 \
     debug.ui.default_gralloc=4 \
     ro.sf.lcd_density=150 \
+	ro.hardware.egl=mesa
 
-	#ro.hardware.egl=mesa
-	#debug.drm.mode.force=640x480
 
