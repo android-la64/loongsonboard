@@ -27,6 +27,8 @@ on early-init
     setprop debug.ui.default_mapper 4
     setprop debug.ui.default_gralloc 4
 
+    setprop persist.sys.timezone "Asia/Shanghai"
+    
 on init
     # set RLIMIT_MEMLOCK to 8MB for BPF network statistics
     setrlimit memlock 8388608 8388608
